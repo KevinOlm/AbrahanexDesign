@@ -1,0 +1,431 @@
+/*The black background of the main content*/
+.work_background {
+    width: 100%;
+    height: auto;
+    background-color: $black;
+    padding-top: 130px;
+    margin-bottom: 30px;
+
+    /*The container of the jumbo img*/
+    .jumbo_content_container {
+        padding: 10px;
+        transition: 0.5s ease-in-out;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /*White background of the jumbo img*/
+        .jumbo_background {
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            opacity: 90%;
+            position: absolute;
+        }
+
+        /*jumbo img close button*/
+        .close_button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: $black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            i {
+                color: $white;
+                font-size: 30px;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+            &:active {
+                background-color: $white;
+                border: 2px solid $black;
+
+                i {
+                    color: $black;
+                }
+            }
+        }
+
+        /*jumbo img close button hover*/
+        .close_button_hover {
+
+            @media (hover:hover) {
+
+                &:hover {
+                    background-color: white;
+                    border: 2px solid $black;
+    
+                    i {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        /*Jumbo img size types*/
+        .jumbo_image {
+            box-shadow: 5px 5px 15px $black;
+            position: relative;
+            opacity: 100%;
+        }
+
+        .jumbo_image_vertical {
+            height: 100%;
+            width: auto;
+        }
+
+        .jumbo_image_horizontal {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    /*Jumbo img hidden/visible properties*/
+    .hidden {
+        visibility: hidden;
+        opacity: 0%;
+    }
+
+    .visible {
+        visibility: visible;
+        opacity: 100%;
+    }
+
+    /*Main title*/
+    .title_container {
+        width: 100%;
+        height: auto;
+        background-color: $white;
+
+        .title {
+            text-align: center;
+            font-size: map-get($font-size-movil, "l");
+        }
+    }
+
+    /*Black background of the main content*/
+    .work_main_content {
+        background-color: $black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+
+        /*Container that have all the gallery elements*/
+        .content_container {
+            width: 100%;
+            background-color: $white;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .loading_container {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .loading_background {
+                
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: $black;
+                
+
+                .loading_icon {
+                    animation: loading_button 3s infinite;
+                    width: 110%;
+                    height: 110%;
+                    background-color: $white;
+                }
+            }
+
+            @keyframes loading_button {
+                0% {
+                    height: 100%;
+                }
+                50% {
+                    height: 0%;
+                }
+                100% {
+                    height: 100%;
+                }
+            }
+        }
+
+        /*Container of all the images*/
+        .gallery_container {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+            flex-wrap: wrap;
+
+            /*Borders of the image*/
+            .image_border {
+                @include column_size(6);
+                height: 250px;
+                padding-bottom: 10px;
+
+                /*Container of a single image*/
+                .image_container {
+                    overflow: hidden;
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    
+                    .image {
+                        transition: opacity 0.3s ease-in-out;
+                    }
+
+                    /*Image size properties*/
+                    .image_vertical {
+                        width: auto;
+                        height: 100%;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+
+                    .image_horizontal {
+                        width: 100%;
+                        height: auto;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:active {
+                        opacity: 70%;
+                    }
+                }
+
+                /*Hover of the image*/
+                .image_container_hover {
+
+                    @media (hover:hover) {
+                        
+                        &:hover {
+                            opacity: 70%;
+                        }
+                    }
+                }
+
+                /*Padding properties for the images*/
+                &:nth-child(odd) {
+                    padding-right: 5px;
+                    padding-left: 0px;
+                }
+
+                &:nth-child(even) {
+                    padding-right: 0px;
+                    padding-left: 5px;
+                }
+            }
+
+            /*Hidden/visible image properties*/
+            .hidden {
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+                padding: 0px;
+                opacity: 0%;
+            }
+        
+            .visible {
+                transition: opacity 0.7s ease-in-out;
+                display: flex;
+                opacity: 100%;
+            }
+        }
+
+        /*Charge button styles*/
+        .button_charge {
+            @include column_size(9);
+            height: 50px;
+            background-color: $black;
+            border-radius: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+
+            .charge_text {
+                color: $white;
+                font-size: map-get($font-size-movil, "m");
+                transition: color 0.3s ease-in-out;
+            }
+
+            &:active {
+
+                background-color: $light-grey;
+                border: 2px solid $black;
+
+                .charge_text {
+                    color: $black;
+                }
+            }
+        }
+
+        /*Charge button hover styles*/
+        .button_charge_hover {
+
+            @media (hover:hover) {
+                &:hover {
+                    background-color: white;
+                    border: 2px solid $black;
+    
+                    .charge_text {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .work_background {
+        padding-top: 170px;
+        margin-bottom: 40px;
+
+        .jumbo_content_container .close_button {
+            width: 90px;
+            height: 90px;
+            top: 20px;
+            right: 20px;
+
+            i {
+                font-size: 40px;
+            }
+        }
+    
+        .title_container .title {
+            font-size: map-get($font-size-tablet, "l");
+        }
+    
+        .work_main_content {
+            padding: 20px;
+
+            .content_container {
+                max-width: 800px;
+            }
+
+            .loading_container {
+
+                .loading_background {
+                    
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+    
+            .gallery_container {
+    
+                .image_border {
+                    height: 350px;
+                }
+
+                .hidden {
+                    height: 0px;
+                }
+            }
+    
+            .button_charge {
+                @include column_size(12);
+    
+                .charge_text {
+                    font-size: map-get($font-size-tablet, "m");
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .work_background {
+        margin-bottom: 80px;
+
+        .jumbo_content_container .close_button {
+            top: 30px;
+            right: 40px;
+        }
+    
+        .title_container .title {
+    
+            font-size: map-get($font-size-pc, "l");
+        }
+    
+        .work_main_content {
+            padding: 40px;
+    
+            .content_container {
+                max-width: 1200px;
+                padding: 20px;
+            }
+    
+            .gallery_container {
+    
+                .image_border {
+                    @include column_size(4);
+                    height: 550px;
+                    padding-bottom: 20px;
+
+                    &:nth-child(3n-2) {
+                        padding-right: 13px;
+                        padding-left: 0px;
+                    }
+
+                    &:nth-child(3n-1) {
+                        padding-right: 7px;
+                        padding-left: 7px;
+                    }
+    
+                    &:nth-child(3n) {
+                        padding-right: 0px;
+                        padding-left: 13px;
+                    }
+                }
+
+                .hidden {
+                    height: 0px;
+                    padding: 0px;
+                }
+            }
+    
+            .button_charge {
+                @include column_size(12);
+                height: 100px;
+                border-radius: 50px;
+    
+                .charge_text {
+                    font-size: map-get($font-size-pc, "m");
+                }
+            }
+        }
+    }
+}

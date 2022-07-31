@@ -1,0 +1,269 @@
+.contact_background {
+    width: 100%;
+    height: auto;
+    background-color: $black;
+    padding-top: 130px;
+    margin-bottom: 30px;
+
+    .title_container {
+        width: 100%;
+        height: auto;
+        background-color: $white;
+        margin-bottom: 10px;
+
+        .title {
+            text-align: center;
+            font-size: map-get($font-size-movil, "l");
+        }
+    }
+
+    .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .media_background {
+            padding: 10px;
+            @include column_size(12);
+            background-color: $white;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .link {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                
+                .icon_container {
+                    width: 50px;
+                    height: 50px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 10px;
+    
+                    i {
+                        transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+                        font-size: 60px;
+                    }
+                }
+    
+                .text_container {
+                    font-size: map-get($font-size-movil, "s");
+                }
+
+                &:active {
+                        
+                    .icon_container i {
+                        transform: rotate(20deg);
+                        color: black;
+                    }
+
+                    .text_container {
+                        color: black;
+                        border-bottom: 2px solid black;
+                    }
+                }
+            }
+
+            .link_hover {
+
+                @media (hover: hover) {
+
+                    &:hover {
+                        
+                        .icon_container i {
+                            transform: rotate(20deg);
+                            color: black;
+                        }
+    
+                        .text_container {
+                            color: black;
+                            border-bottom: 2px solid black;
+                        }
+                    }
+                }
+            }
+
+
+            #map_container {
+                width: 90vw;
+                height: 90vw;
+                max-width: 390px;
+                max-height: 390px;
+                background-color: black;
+                border-radius: 50%;
+                margin-bottom: 20px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                iframe {
+                    min-width: 110%;
+                    min-height: 170%;
+                }
+            }
+        }
+
+        .ubication {
+            margin-top: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                font-size: 90px;
+                color: $white;
+                position: absolute;
+                top: -100px;
+            }
+
+            .text {
+                font-size: map-get($font-size-movil, "s");
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .contact_background {
+        padding-top: 150px;
+        margin-bottom: 40px;
+    
+        .title_container {
+            margin-bottom: 20px;
+        
+            .title {
+                font-size: map-get($font-size-tablet, "l");
+            }
+        }
+
+        .media {
+            flex-direction: row;
+    
+            .media_background {
+                padding: 10px;
+                @include column_size(6);
+                margin-bottom: 20px;
+
+                .link {
+                    
+                    .icon_container {
+                        width: 60px;
+                        height: 60px;
+                        margin-right: 10px;
+        
+                        i {
+                            font-size: 70px;
+                        }
+                    }
+        
+                    .text_container {
+                        font-size: map-get($font-size-tablet, "s");
+                    }
+                }
+    
+    
+                #map_container {
+                    width: 100%;
+                    max-width: 100%;
+                    border-radius: 220px/50%;
+                }
+            }
+    
+            .ubication {
+                @include column_size(12);
+                margin-top: 110px;
+
+                i {
+                    top: -110px;
+                }
+
+                .text {
+                    font-size: map-get($font-size-tablet, "s");
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .contact_background {
+        padding-top: 190px;
+        margin-bottom: 80px;
+    
+        .title_container {
+            margin-bottom: 40px;
+
+            .title {
+    
+                font-size: map-get($font-size-pc, "l");
+            }
+        }
+    
+        .media {
+    
+            .media_background {
+                padding: 20px 40px;
+                @include column_size(4);
+                margin-bottom: 40px;
+
+                .link {
+
+                    .icon_container {
+                        width: 70px;
+                        height: 70px;
+                        margin-right: 20px;
+        
+                        i {
+                            font-size: 85px;
+                        }
+                    }
+        
+                    .text_container {
+                        font-size: map-get($font-size-pc, "xs");
+                    }
+                }
+    
+    
+                #map_container {
+                    height: 445px;
+                    max-height: 445px;
+                    border-radius: 220px/50%;
+                }
+            }
+
+            .mail {
+                @include column_size(9);
+                display: flex;
+                justify-content: center
+            }
+    
+            .ubication {
+                @include column_size(12);
+                margin-top: 0px;
+
+                i {
+                    font-size: 110px;
+                    top: -150px;
+                    right: 9vw;
+                }
+
+                .text {
+                    font-size: map-get($font-size-pc, "xs");
+                }
+            }
+        }
+    }
+}

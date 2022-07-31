@@ -1,0 +1,277 @@
+.about_background {
+    width: 100%;
+    height: auto;
+    background-color: $black;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    .about_main_content {
+        width: auto;
+        max-width: 400px;
+        margin: auto;
+        height: auto;
+        background-color: $white;
+        padding: 20px;
+        overflow: hidden;
+
+        .main_text_container {
+
+            .slogan {
+                font-size: map-get($font-size-movil , "m");
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: map-get($font-size-movil , "s");
+                line-height: 25px;
+            }
+        }
+
+        .person {
+            width: 100%;
+            height: auto;
+            background-color: white;
+            border-radius: 70px/50%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            position: relative;
+            z-index: 0;
+            margin-top: 130px;
+
+            .image_container {
+                width: 125px;
+                height: 125px;
+                min-width: 125px;
+                min-height: 125px;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                top: -110px;
+                z-index: -1;
+
+                .image {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .person_background {
+                background-color: white;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                border-radius: 70px/50%;
+                visibility: visible;
+            }
+
+            .person_text_container {
+                width: 100%;
+                padding: 15px 35px;
+                text-align: center;
+                color: $dark-grey;
+
+                .title {
+                    font-size: map-get($font-size-movil , "m");
+                    margin-bottom: 5px;
+                    letter-spacing: 1px;
+                }
+
+                .person_text {
+                    font-size: map-get($font-size-movil , "xs");
+                }
+
+                .person_social_media {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    bottom: -10px;
+                    right: 30px;
+
+                    .icon_container {
+                        width: 20px;
+                        height: 20px;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 10px;
+                        transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+                        @media (hover: hover) {
+                        
+                            &:hover {
+                                color: black;
+                                transform: rotate(20deg);
+                            }
+                        }
+
+                        &:active {
+                            color: black;
+                            transform: rotate(20deg);
+                        }
+                        
+                        &:first-child {
+                            margin-right: 10px;
+                        }
+
+                        i {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+
+    .about_background {
+        padding: 40px;
+        margin-bottom: 40px;
+    
+        .about_main_content {
+            max-width: 700px;
+    
+            .main_text_container {
+
+                .slogan {
+                    font-size: map-get($font-size-tablet , "m");
+                    margin-bottom: 25px;
+                }
+    
+                p {
+                    font-size: map-get($font-size-tablet , "s");
+                    line-height: 30px;
+                }
+            }
+    
+            .person {
+                border-radius: 15vh;
+                margin-top: 20px;
+    
+                .image_container {
+                    width: 145px;
+                    height: 145px;
+                    min-width: 145px;
+                    min-height: 145px;
+                    position: relative;
+                    top: 0px;
+                    z-index: 0;
+                    margin: 10px;
+                }
+    
+                .person_background {
+                    visibility: hidden;
+                }
+    
+                .person_text_container {
+                    padding: 10px 45px 10px 0px;
+                    text-align: left;
+    
+                    .title {
+                        font-size: map-get($font-size-tablet , "m");
+                    }
+    
+                    .person_text {
+                        font-size: map-get($font-size-tablet , "xs");
+                    }
+
+                    .person_social_media {
+                        bottom: -10px;
+    
+                        .icon_container {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 15px;
+                            
+                            &:first-child {
+                                margin-right: 15px;
+                            }
+    
+                            i {
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1280px) {
+
+    .about_background {
+        padding: 80px;
+        margin-bottom: 80px;
+    
+        .about_main_content {
+            padding: 40px;
+            max-width: 1200px;
+    
+            .main_text_container {
+
+                .slogan {
+                    font-size: map-get($font-size-pc , "m");
+                    margin-bottom: 30px;
+                }
+    
+                p {
+                    font-size: map-get($font-size-pc , "s");
+                    line-height: 55px;
+                }
+            }
+    
+            .person {
+                border-radius: 25vh;
+                margin-top: 40px;
+    
+                .image_container {
+                    width: 290px;
+                    height: 290px;
+                    min-width: 290px;
+                    min-height: 290px;
+                    margin: 20px;
+                }
+    
+                .person_text_container {
+                    padding: 20px 75px 20px 0px;
+    
+                    .title {
+                        font-size: map-get($font-size-pc , "m");
+                        margin-bottom: 20px;
+                    }
+    
+                    .person_text {
+                        font-size: map-get($font-size-pc , "xs");
+                        line-height: 40px;
+                    }
+
+                    .person_social_media {
+    
+                        .icon_container {
+                            width: 50px;
+                            height: 50px;
+                            border-radius: 25px;
+                            
+                            &:first-child {
+                                margin-right: 25px;
+                            }
+    
+                            i {
+                                font-size: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

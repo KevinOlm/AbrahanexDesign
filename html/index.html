@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <script src="https://kit.fontawesome.com/9372b6e98b.js" crossorigin="anonymous"></script>
+    <title>Abrahanex Design</title>
+</head>
+<body>
+    <header class="header_background header_background_dark">
+        <div class="header_title_container">
+            <a href="index.html" class="header_title visible"><img src="../images/abrahanex_blanco_sombra.png" alt=""></a>
+            <a href="index.html" class="header_title hidden"><img src="../images/abrahanex_dark_gray.png" alt=""></a>
+        </div>
+        <div class="nav_button nav_button_active"></div>
+        <div class="links">
+            <nav class="nav_menu">
+                <ul class="menu_list">
+                    <li><a href="about.html" class="about title menu_item hidden"><span>Sobre</span><span> Nosotros</span></a></li>
+                    <li><a href="work.html" class="work title menu_item hidden"><span>Nuestro</span><span> Trabajo</span></a></li>
+                    <li><a href="contact.html" class="contact title menu_item hidden"><span>Contacto</span></a></li>
+                </ul>
+            </nav>
+            <div class="media">
+                <section class="contact_section info_section hidden">
+                    <h4 class="title">Contáctanos</h4>
+                    <ul>
+                        <li class="whatsapp"><a class="header_link" href="https://wa.me/523951029994/?text=Hola!%20Me%20interesan%20tus%20productos!" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+52-395-102-9994</span>
+                        </a></li>
+                        <li><a class="header_link" href="https://www.instagram.com/designer_abrahanex/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>@designer_abrahanex</span>
+                        </a></li>
+                        <li><a class="header_link" href="https://www.facebook.com/Desing-By-Abrahanex-105249371097979" target="_blank">
+                            <i class="fab fa-facebook-square"></i>
+                            <span>Desing by Abrahanex</span>
+                        </a></li>
+                        <li><a class="header_link" href="mailto:abrahanexdesigner@gmail.com">
+                            <i class="far fa-envelope"></i>
+                            <span>abrahanexdesigner@gmail.com</span>
+                        </a></li>
+                    </ul>
+                </section>
+                <section class="foundus_section info_section hidden">
+                    <h4 class="title">Encuéntranos</h4>
+                    <a href="contact.html#map_container" class="header_link"><span>Calle Francia #174, Colonia La Martinica, CP 47020, San Juan de los Lagos, Jal.</span></a>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider">
+        <input type="radio" name="slider_radio_btn" id="slider_radio_button_1" class="slider_radio_button" checked>
+        <input type="radio" name="slider_radio_btn" id="slider_radio_button_2" class="slider_radio_button">
+        <input type="radio" name="slider_radio_btn" id="slider_radio_button_3" class="slider_radio_button">
+
+        <div class="slider_images">
+            <div class="slider_image_container"><video autoplay loop muted src="../../Imagenes/Nature.mp4" class="slider_image slider_image_vertical"></video></div>
+            <div class="slider_image_container"><img src="../../Imagenes/dog-4688913_1920.jpg" alt="" class="slider_image slider_image_vertical"></div>
+            <div class="slider_image_container"><img src="../../Imagenes/music-3084876_1920.jpg" alt="" class="slider_image slider_image_vertical"></div>
+        </div>
+
+        <div class="slider_manual_navigation">
+            <label for="slider_radio_button_1" class="slider_manual_button_label" id="slider_manual_button_label_1"></label>
+            <label for="slider_radio_button_2" class="slider_manual_button_label" id="slider_manual_button_label_2"></label>
+            <label for="slider_radio_button_3" class="slider_manual_button_label" id="slider_manual_button_label_3"></label>
+        </div>
+        
+    </div>
+
+    <div class="purchase_tab purchase_tab_hidden">
+        <div class="close_button"><i class="fas fa-times"></i></div>
+        <div class="purchase_tab_background"></div>
+        <div class="bought_tab">
+            <div class="slide_button"></div>
+            <p class="bought_text">
+                Listo, ahora que ha personalizado su producto, mándenos una captura de pantalla a cualquiera de nuestras redes sociales, estaremos encantados de brindarle los detalles de su compra
+            </p>
+            <div class="social_media">
+    
+            </div>
+        </div>
+        <div class="purchase_tab_image_border">
+            <div class="purchase_tab_image_container"><img class="purchase_tab_image image_vertical" src="" alt=""></div>
+            <div class="personalized_text_container">
+                <p class="text"></p>
+            </div>
+            <div class="personalized_image_container">
+                <div class="resizer" id="resizer_se"></div>
+            </div>
+        </div>
+        <div class="purchase_tab_info">
+            <h3 class="title purchase_tab_title">Producto</h3>
+            <div class="product_user_select">
+                <div class="product_select_container" id="product_type_container">
+                    <label for="product_type">Tipo</label>
+                    <select class="product_select" name="" id="product_type"></select>
+                </div>
+                <div class="product_select_container" id="product_color_container">
+                    <label for="product_color">Color</label>
+                    <select class="product_select" name="" id="product_color">
+                        <option value="n">Negro</option>
+                        <option value="b">Blanco</option>
+                    </select>
+                </div>
+                <div class="product_select_container product_select_container_hidden" id="product_model_container">
+                    <label for="product_color">Modelo</label>
+                    <select class="product_select" name="" id="product_model">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="product_select_container" id="product_size_container">
+                    <label for="product_size">Talla/Género</label>
+                    <select class="product_select" name="" id="product_size">
+                        <option value="h/s">Hombre - Chico</option>
+                        <option value="h/m">Hombre - Mediano</option>
+                        <option value="h/l">Hombre - Grande</option>
+                        <option value="h/xl">Hombre - Extra Grande</option>
+                        <option value="m/xs">Mujer - Extra Chica</option>
+                        <option value="m/s">Mujer - Chica</option>
+                        <option value="m/m">Mujer - Mediana</option>
+                        <option value="m/l">Mujer - Grande</option>
+                        <option value="m/xl">Mujer - Extra Grande</option>
+                        <option value="n/xs">Niño - Extra Chica</option>
+                        <option value="n/s">Niño - Chica</option>
+                        <option value="n/m">Niño - Mediana</option>
+                        <option value="n/l">Niño - Grande</option>
+                        <option value="n/xl">Niño - Extra Grande</option>
+                    </select>
+                </div>
+                <div class="product_personalization">
+                    <label for="product_image_personalization" class="image_personalization_label">Imagen</label>
+                    <input type="file" name="product_image_personalization" id="product_image_personalization" accept=".jpg, .png, .svg">
+                    <button id="personalization_button" class="personalization_button_class">Escoge una Imagen</button>
+                    <label for="product_text_personalization">Texto</label>
+                    <input type="text" name="product_text_personalization" id="product_text_personalization">
+                </div>
+            </div>
+            <p class="product_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus iusto sed quod, porro earum quidem distinctio inventore ut?</p>
+        </div>
+        <div class="purchase_tab_purchase">
+            <span class="product_price">$999</span>
+            <div class="purchase_button"><span class="purchase_button_text">Comprar</span></div>
+        </div>
+    </div>
+
+    <div class="service_tab service_tab_hidden">
+        <div class="service_tab_background">
+            <div class="service_close_button"><i class="fas fa-times"></i></div>
+            <div class="service_container">
+                <h2 class="title">Impresión/Fotocopiado</h2>
+                <div class="icon_container">
+                    <i class="fas fa-print"></i>
+                </div>
+                <div class="service_description">
+                    <ul>
+                        <li>Impresión láser</li>
+                        <li>Impresión de inyección de tinta</li>
+                        <li>Impresión de stickers</li>
+                        <li>Impresión de lonas</li>
+                        <li>Impresión de tarjetas de presentación</li>
+                        <li>Impresión de fotos</li>
+                        <li>Fotocopiado</li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="service_container">
+                <h2 class="title">Diseño</h2>
+                <div class="icon_container">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <div class="service_description">
+                    <ul>
+                        <li>Diseño de logotipos</li>
+                        <li>Diseño de dibujos personalizados</li>
+                        <li>Diseño de lonas</li>
+                        <li>Diseño de tarjetas de presentación</li>
+                        <li>Diseño de cartelería</li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="service_container">
+                <h2 class="title">Sesiones fotográficas</h2>
+                <div class="icon_container">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="service_description">
+                    <ul>
+                        <li>Diseño de logotipos</li>
+                        <li>Diseño de dibujos personalizados</li>
+                        <li>Diseño de lonas</li>
+                        <li>Diseño de tarjetas de presentación</li>
+                        <li>Diseño de cartelería</li>
+                    </ul>
+                </div>
+                <hr>
+            </div>
+            <div class="service_container">
+                <h2 class="title">Edición</h2>
+                <div class="icon_container">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <div class="service_description">
+                    <ul>
+                        <li>Edición de video</li>
+                        <li>Retoque fotográfico</li>
+                        <li>Mejora de calidad fotográfica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="index_main_content">
+        <div class="product" id="shirt">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/playera-mr.robot_.png" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Playeras</span>
+            </div>
+        </div>
+        <div class="product" id="sweatshirt">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/toa-heftiba-ua9ReZlzcIE-unsplash.jpg" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Sudaderas</span>
+            </div>
+        </div>
+        <div class="product" id="hat">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/61BSRFP3TgL._SX569_.jpg" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Gorras</span>
+            </div>
+        </div>
+        <div class="product" id="cases">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/fundas-personalizadas-para-movil-presentacion-de-movil-con-bebés-1759x879.jpg" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Fundas</span>
+            </div>
+        </div>
+        <div class="product" id="thermo">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/ember-smart-mug-lifestyle13-1500x1000.jpg" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Termos</span>
+            </div>
+        </div>
+        <div class="product" id="cup">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/30499214ead59c7dd9f9d718d782d510.jpg" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Tazas</span>
+            </div>
+        </div>
+        <div class="product" id="services">
+            <div class="product_container">
+                <div class="product_image_container">
+                    <img src="../../Imagenes/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg" alt="" class="product_image product_image_horizontal">
+                </div>
+                <span class="product_name">Servicios</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="logo_container"><a href="index.html" class="footer_logo"><img src="../images/logo_abrahanex_white.png" alt=""></a></div>
+        <div class="media">
+            <section class="contact_section">
+                <h4 class="title">Contáctanos</h4>
+                <ul>
+                    <li class="whatsapp"><a class="footer_link" href="https://wa.me/523951029994/?text=Hola!%20Me%20interesan%20tus%20productos!" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+52-395-102-9994</span>
+                    </a></li>
+                    <li><a class="footer_link" href="https://www.instagram.com/designer_abrahanex/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>@designer_abrahanex</span>
+                    </a></li>
+                    <li><a class="footer_link" href="https://www.facebook.com/Desing-By-Abrahanex-105249371097979" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                        <span>Desing by Abrahanex</span>
+                    </a></li>
+                    <li><a class="footer_link" href="mailto:abrahanexdesigner@gmail.com">
+                        <i class="far fa-envelope"></i>
+                        <span>abrahanexdesigner@gmail.com</span>
+                    </a></li>
+                </ul>
+            </section>
+            <section class="foundus_section">
+                <h4 class="title">Encuéntranos</h4>
+                <a href="contact.html#map_container" class="footer_link"><span>Calle Francia #174, Colonia La Martinica, CP 47020, San Juan de los Lagos, Jal.</span></a>
+            </section>
+        </div>
+    </footer>
+
+    <script type="module" src="../js/index_script.js"></script>
+</body>
+</html>

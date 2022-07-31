@@ -1,0 +1,117 @@
+/*General slider styles*/
+.slider {
+    width: 100%;
+    height: 67vh;
+    position: relative;
+    overflow: hidden;
+
+    /*Radio button*/
+    .slider_radio_button {
+        display: none;
+    }
+
+    /*Radio button when active*/
+    #slider_radio_button_1:checked ~ .slider_manual_navigation #slider_manual_button_label_1 {
+        background-color: $black;
+    }
+
+    #slider_radio_button_1:checked ~ .slider_images {
+        left: 0%;
+    }
+
+    #slider_radio_button_2:checked ~ .slider_manual_navigation #slider_manual_button_label_2 {
+        background-color: $black;
+    }
+
+    #slider_radio_button_2:checked ~ .slider_images {
+        left: -100%;
+    }
+
+    #slider_radio_button_3:checked ~ .slider_manual_navigation #slider_manual_button_label_3 {
+        background-color: $black;
+    }
+
+    #slider_radio_button_3:checked ~ .slider_images {
+        left: -200%;
+    }
+
+    /*The images container*/
+    .slider_images {
+        width: 300%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        transition: 1s ease-in-out;
+
+        /*A single image container*/
+        .slider_image_container {
+            width: 33.33%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            /*A image in the slider*/
+            .slider_image_vertical {
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .slider_image_horizontal {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    /*The manual navigation buttons container*/
+    .slider_manual_navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+
+        /*Each navigation button*/
+        .slider_manual_button_label {
+            cursor: pointer;
+            background-color: $light-grey;
+            border-radius: 5px;
+            width: 40px;
+            height: 8px;
+            margin-right: 5px;
+            box-shadow: 1px 1px 8px black;
+            transition: 0.3s ease-in-out;
+        }
+
+        .slider_manual_button_label_hover {
+
+            @media (hover: hover) {
+                
+                &:hover {
+                    background-color: $white;
+                    border: 1px solid $black;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .slider {
+        height: 80vh;
+    }
+}
+
+@media (min-width: 1280px) {
+    .slider {
+        height: 100vh;
+    }
+}

@@ -1,0 +1,24 @@
+.bought_tab {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    /*
+    .slide_button {
+        
+    }
+    */
+
+    .bought_text {
+        font-size: map-get($font-size-movil, "m");
+        color: white;
+        text-align: center;
+    }
+}

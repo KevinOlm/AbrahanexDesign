@@ -1,0 +1,195 @@
+.service_tab_hidden {
+    left: -120%;
+}
+
+.service_tab_visible {
+    left: 0%;
+}
+
+.service_tab {
+    width: 100%;
+    height: calc(100vh - 160px);
+    position: fixed;
+    top: 80px;
+    z-index: 2;
+    transition: left 1s ease-in-out;
+    box-shadow: 0px 0px 5px black;
+
+    .service_tab_background {  
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+
+        .service_close_button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: $black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            z-index: 3;
+    
+            i {
+                color: $white;
+                font-size: 30px;
+                transition: color 0.3s ease-in-out;
+            }
+    
+            &:active {
+                background-color: $white;
+                border: 2px solid $black;
+    
+                i {
+                    color: $black;
+                }
+            }
+
+            @media (hover:hover) {
+
+                &:hover {
+                    background-color: $white;
+                    border: 2px solid $black;
+    
+                    i {
+                        color: $black;
+                    }
+                }
+            }
+        }
+
+        .service_container {
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+            .title {
+                font-size: map-get($font-size-movil, "m");
+            }
+
+            .icon_container {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: black;
+                margin: 10px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i {
+                    color: $white;
+                    font-size: 25px;
+                }
+            }
+
+            .service_description {
+                font-size: map-get($font-size-movil, "s");
+                margin-bottom: 20px;
+            }
+
+            hr {
+                margin-bottom: 20px;
+                color: $black;
+                border: 0.5px solid black;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .service_tab {
+        height: calc(100vh - 260px);
+        top: 130px;
+        box-shadow: 0px 0px 10px black;
+    
+        .service_tab_background {  
+            padding: 20px;
+
+            .service_close_button {
+                width: 90px;
+                height: 90px;
+                top: 20px;
+                left: 20px;
+    
+                i {
+                    font-size: 40px;
+                }
+            }
+    
+            .service_container {
+    
+                .title {
+                    font-size: map-get($font-size-tablet, "m");
+                }
+    
+                .icon_container {
+                    height: 60px;
+                    width: 60px;
+                    margin: 20px auto;
+
+                    i {
+                        font-size: 35px;
+                    }
+                }
+    
+                .service_description {
+                    font-size: map-get($font-size-tablet, "s");
+                    margin-bottom: 30px;
+                }
+    
+                hr {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .service_tab {
+        height: calc(100vh - 300px);
+        top: 150px;
+    
+        .service_tab_background {  
+            padding: 40px;
+    
+            .service_container {
+    
+                .title {
+                    font-size: map-get($font-size-pc, "m");
+                }
+    
+                .icon_container {
+                    height: 90px;
+                    width: 90px;
+                    margin: 30px auto;
+
+                    i {
+                        font-size: 50px;
+                    }
+                }
+    
+                .service_description {
+                    font-size: map-get($font-size-pc, "s");
+                    margin-bottom: 50px;
+                }
+    
+                hr {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
